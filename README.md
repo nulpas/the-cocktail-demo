@@ -1,4 +1,4 @@
-#Webpack + SASS + ES6 Project Demo
+# Webpack + SASS + ES6 Project Demo
 
 Just clone this repository and then:
 

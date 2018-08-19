@@ -1,0 +1,68 @@
+@import '../base/vars';
+@import '../base/utils';
+
+@import 'improve-stay';
+@import 'room-services';
+
+//
+// Desktop
+//
+.content02 {
+  .tip__container {
+    background-color: white;
+    border: 1px solid $primaryGray;
+    margin-bottom: 20px;
+    .tip__mark {
+      padding: 0;
+      text-align: right;
+      SPAN {
+        display: inline-block;
+        @include applyFont($fontSansSerif, 12px, white);
+        letter-spacing: 1.52px;
+        background-color: $markRed;
+        padding: 5px 20px;
+      }
+    }
+    .tip__title {
+      padding: 0 20px 20px 20px;
+      @include applyFont($fontSerif, 24px, $softBlue, bolder);
+      A.tip__link {
+        cursor: pointer;
+        I {
+          font-size: 38px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .tip__container:last-child {
+    margin: 0;
+  }
+}
+
+//
+// Tablet
+//
+@include media($tablet) {
+  .content02 {
+
+  }
+}
+
+//
+// Mobile
+//
+@include media($mobile) {
+  .content02 {
+    .tip__container {
+      .tip__title {
+        font-size: 20px;
+        A.tip__link {
+          I {
+            font-size: 34px;
+          }
+        }
+      }
+    }
+  }
+}

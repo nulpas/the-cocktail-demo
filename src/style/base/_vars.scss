@@ -1,0 +1,30 @@
+// Colors
+$primaryGray: #CCCCCC;
+$secondaryGray: #DDDDDD;
+$backgroundGray: #EEEEEE;
+$hardGray: #999999;
+$strongGray: #666666;
+
+$primaryBlue: #003970;
+$secondaryBlue: #105AA3;
+$borderBlue: #326C96;
+$hardBlue: #001841;
+$softBlue: #4BA7EE;
+
+$checkboxSelected: #6DC138;
+
+$markRed: #E82E34;
+
+// Box Model
+$menuHeight: 35px;
+
+// Typography
+$fontSerif: 'Roboto Slab', serif;
+$fontSansSerif: 'Roboto', sans-serif;
+
+// MediaQueries Breakpoints
+// See https://github.com/carloscabo/mqbe and ./utils for both js and sass media queries helpers
+$mobile: 767px;
+$tablet: 1023px;
+$small-desktop:  1024px;
+$medium-desktop: 1264px;

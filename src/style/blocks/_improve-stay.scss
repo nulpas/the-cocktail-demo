@@ -1,0 +1,83 @@
+@import '../base/vars';
+@import '../base/utils';
+
+@import "improve-stay-more-data";
+
+#improve {
+  padding: 0 30px 30px 30px;
+  .improve__container {
+    border: 1px solid $primaryGray;
+    margin-bottom: 20px;
+    .improve__data {
+      @include createFlexBox(row, normal, normal, nowrap);
+      .improve__img {
+        width: 270px;
+        IMG {
+          display: inherit;
+        }
+      }
+      .improve__text {
+        @include createFlexBox(column, normal, space-between, wrap);
+        padding: 20px;
+        width: 50%;
+        .improve__text--block {
+          @include applyFont($fontSansSerif, 14px, $strongGray);
+          .improve__title {
+            @include applyFont($fontSerif, 18px, $primaryBlue, bolder);
+            margin-bottom: 10px;
+          }
+        }
+        .improve__text--bottom {
+          @include applyFont($fontSerif, 14px, $softBlue, bolder);
+          margin-top: 20px;
+          A.improve__link {
+            cursor: pointer;
+            I {
+              font-size: 19px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+  .improve__container:last-child {
+    margin: 0;
+  }
+}
+
+//
+// Tablet
+//
+@include media($tablet) {
+  #improve {
+
+  }
+}
+
+//
+// Mobile
+//
+@include media($mobile) {
+  #improve {
+    .improve__container {
+      .improve__data {
+        @include createFlexBox(row, normal, normal, wrap);
+        .improve__img {
+          width: 100%;
+          IMG {
+            width: 100%;
+          }
+        }
+        .improve__text {
+          width: 84%;
+          .improve__text--bottom {
+            A.improve__link {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

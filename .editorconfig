@@ -1,0 +1,21 @@
+# EditorConfig Documentation: http://editorconfig.org/
+
+# Top-most .editorconfig file
+root = true
+
+# Apply for all file types
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Apply only for JSON, BSON and MD files
+#[*.{json,bson,md}]
+#indent_size = 4
+
+# Apply only for MD files
+[*.md]
+trim_trailing_whitespace = false

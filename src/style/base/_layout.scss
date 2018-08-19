@@ -1,0 +1,56 @@
+@import 'vars';
+@import 'utils';
+
+* {
+  outline: none;
+}
+
+body {
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.row {
+  width: 100%;
+  clear: both;
+  @extend %clearfix;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $medium-desktop;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  @extend %clearfix;
+}
+
+.menu {
+  background-color: white;
+  border-bottom: 2px solid $primaryGray;
+  height: $menuHeight;
+  @include createFlexBox(row, normal, flex-end, wrap);
+  BUTTON {
+    @include applyFont($fontSerif, 16px, $softBlue);
+    cursor: pointer;
+    border: none;
+    border-bottom: 2px solid $primaryGray;
+    margin-bottom: -2px;
+    background-color: white;
+    width: 150px;
+    &:HOVER {
+      color: $primaryBlue;
+      border-bottom-color: $primaryBlue;
+    }
+    &.menu__button--selected {
+      color: $primaryBlue;
+      border-bottom-color: $primaryBlue;
+    }
+  }
+}
+
+.content {
+  padding: 30px;
+}

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+@import 'vars';
+
+//## Mixin for apply font properties.
+//## PARAMETERS: font-family, font-size, color, font-weight[optional]
+@mixin applyFont($fontFamily, $fontSize, $fontColor, $fontWeight: false) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $fontColor;
+  @if $fontWeight {
+    font-weight: $fontWeight;
+  }
+  @content;
+}
+
+//## Mixin for apply flex properties to container.
+//## PARAMETERS: flex-direction, align-items, justify-content, flex-wrap
+@mixin createFlexBox($flexDirection, $alignItems, $justifyContent, $wrapMode) {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-flow: $flexDirection $wrapMode;
+  -webkit-flex-direction: $flexDirection $wrapMode;
+  -ms-flex-direction: $flexDirection $wrapMode;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  align-items: $alignItems;
+  -webkit-align-items: $alignItems;
+  -ms-flex-align: $alignItems;
+  justify-content: $justifyContent;
+  -webkit-justify-content: $justifyContent;
+  @content;
+}
+
+//
+// Responsive helpers
+//
+
+@mixin media($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Desktop
+.hide-on-desktop,
+.responsive-only,
+.tablet-only,
+.mobile-only {
+  display: none !important;
+}
+.desktop-only,
+.hide-on-responsive,
+.hide-on-tablet,
+.hide-on-mobile {
+  display: inherit;
+}
+
+// Tablet
+@media only screen and (max-width: $tablet) {
+  .responsive-only,
+  .tablet-only {
+    display: block !important;
+  }
+  .desktop-only,
+  .hide-on-responsive,
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+// Mobile
+@media only screen and (max-width: $mobile) {
+  .responsive-only,
+  .mobile-only {
+    display: block !important;
+  }
+  .desktop-only,
+  .hide-on-responsive,
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+
+// @include clearfix()
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// @extend %clearfix
+%clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

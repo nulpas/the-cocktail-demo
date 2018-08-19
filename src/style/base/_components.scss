@@ -1,0 +1,56 @@
+@import 'vars';
+
+//## Mixin for personalized checkbox component.
+//## PARAMETERS: border-color, background-color, height and width[optional], top and left[optional]
+@mixin checkbox($colorUnchecked, $colorChecked, $size: 16px, $innerPadding: 3px) {
+  .checkbox__container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .checkbox__container input {
+    position: absolute;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  .checkbox__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $size;
+    width: $size;
+    border: 1px solid $colorUnchecked;
+    border-radius: 50%;
+  }
+
+  .checkbox__container input:checked ~ .checkbox__mark {
+    border-color: $colorChecked;
+  }
+
+  .checkbox__mark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  .checkbox__container input:checked ~ .checkbox__mark:after {
+    display: block;
+  }
+
+  .checkbox__container .checkbox__mark:after {
+    $innerChecked: $size - ($innerPadding * 2);
+    top: $innerPadding;
+    left: $innerPadding;
+    width: $innerChecked;
+    height: $innerChecked;
+    border-radius: 50%;
+    background-color: $colorChecked;
+  }
+}

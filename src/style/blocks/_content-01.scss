@@ -1,0 +1,113 @@
+@import '../base/vars';
+@import '../base/utils';
+
+@import '../base/components';
+
+//
+// Desktop
+//
+.content01 {
+  .title {
+    @include createFlexBox(row, center, center, wrap);
+    @include applyFont($fontSerif, 30px, $primaryBlue, bolder);
+    text-align: center;
+    margin-bottom: 30px;
+    SPAN {
+      margin-right: 20px;
+      &.name {
+        font-size: 24px;
+        font-weight: normal;
+      }
+      I {
+        color: gold;
+        vertical-align: middle;
+      }
+    }
+    SPAN:last-child {
+      margin: 0;
+    }
+  }
+  .options {
+    @include createFlexBox(row, normal, space-between, wrap);
+    & > .options__container {
+      width: 17.5%;
+      min-height: 70vh;
+      min-width: 200px;
+      border: 1px solid $primaryGray;
+      padding: 10px;
+      background-color: white;
+      margin-bottom: 10px;
+      @include createFlexBox(column, normal, space-between, nowrap);
+      &.item--selected {
+        border-color: $borderBlue;
+      }
+      .options__name {
+        text-align: center;
+        margin: 10px 0 20px 0;
+        @include applyFont($fontSansSerif, 16px, $secondaryBlue, bolder);
+      }
+      HR {
+        background-color: $secondaryGray;
+        width: 40%;
+        height: 1px;
+        margin: 0 auto;
+        border: none;
+      }
+      .options__details {
+        height: 100%;
+        & > UL {
+          padding-left: 20px;
+          LI {
+            @include applyFont($fontSansSerif, 15px, $primaryGray);
+            margin-bottom: 8px;
+            SPAN {
+              color: $hardBlue;
+            }
+          }
+        }
+      }
+      .options__action {
+        @include applyFont($fontSansSerif, 16px, $hardGray);
+        padding: 20px;
+        background-color: $backgroundGray;
+        border: 1px solid $backgroundGray;
+        cursor: pointer;
+        &.item--selected {
+          border-color: $borderBlue;
+          color: $primaryBlue;
+        }
+        @include checkbox($hardGray, $checkboxSelected);
+      }
+    }
+  }
+}
+
+//
+// Tablet
+//
+@include media($tablet) {
+  .content01 {
+    .options {
+      @include createFlexBox(row, normal, normal, wrap);
+      & > .options__container {
+        min-height: max-content;
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
+}
+
+//
+// Mobile
+//
+@include media($mobile) {
+  .content01 {
+    .options {
+      @include createFlexBox(row, normal, normal, wrap);
+      & > .options__container {
+        min-height: max-content;
+        width: 93%;
+      }
+    }
+  }
+}

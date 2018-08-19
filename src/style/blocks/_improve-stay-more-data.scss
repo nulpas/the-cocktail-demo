@@ -1,0 +1,51 @@
+@import '../base/vars';
+@import '../base/utils';
+
+#more {
+  padding: 20px 20px 20px 80px;
+  width: 70%;
+  @include applyFont($fontSansSerif, 14px, $strongGray);
+  .more__list {
+    height: 130px;
+    max-height: 130px;
+    margin: 10px 0 30px 0;
+    @include createFlexBox(column, normal, normal, wrap);
+    UL {
+      width: 30%;
+      padding: 0;
+      margin: 3px 30px;
+    }
+  }
+  .more__bottom {
+    @include applyFont($fontSansSerif, 14px, $primaryBlue, bolder);
+  }
+}
+
+//
+// Tablet
+//
+@include media($tablet) {
+  #more {
+    padding: 20px 20px 20px 40px;
+    .more__list {
+      height: 200px;
+      max-height: 200px;
+    }
+  }
+}
+
+//
+// Mobile
+//
+@include media($mobile) {
+  #more {
+    padding: 20px;
+    .more__list {
+      height: max-content;
+      max-height: max-content;
+      UL {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+# -- App ---------------------------------------------
+npm-debug.log
+node_modules/
+bower_components/
+local.app.config.js
+dist-dev/
+dist/
+
+# -- Editors -----------------------------------------
+# Visual Studio
+*.csproj
+*.csproj.user
+bin/
+obj/
+packages.config
+
+# vim
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# eclipse
+*.pydevproject
+.metadata
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+.buildpath
+
+# PhpStorm
+.idea/
+
+# textmate
+*.tmproj
+*.tmproject
+tmtags
+
+# sublimetext
+/*.sublime-project
+*.sublime-workspace
+
+# netbeans
+nbproject/
+build/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# -- Operating Systems ------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+!.editorconfig
+!.gitignore
+!.htaccess
+!.jscsrc
+!.jshintrc
+
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# -- Others -----------------------------------------
+# Sonar
+.scannerwork

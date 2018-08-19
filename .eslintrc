@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base/legacy"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "globals": {},
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "global-require": "off",
+    "max-len": [2, 120],
+    "no-console": [2, {
+      "allow": ["error", "warn"]
+    }],
+    "no-underscore-dangle": "off"
+  }
+}

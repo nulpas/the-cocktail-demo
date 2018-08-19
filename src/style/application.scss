@@ -1,0 +1,10 @@
+@import '~normalize-scss/sass/normalize';
+@include normalize();
+@import '~animate.css/animate.css';
+
+@import 'base/vars';
+@import 'base/utils';
+@import 'base/layout';
+
+@import 'blocks/content-01';
+@import 'blocks/content-02';

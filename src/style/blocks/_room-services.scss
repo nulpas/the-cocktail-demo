@@ -1,0 +1,11 @@
+@import '../base/vars';
+@import '../base/utils';
+
+#services {
+  padding: 0 30px 30px 30px;
+  .services__container {
+    border: 1px solid $primaryGray;
+    padding: 20px;
+    @include applyFont($fontSansSerif, 14px, $strongGray);
+  }
+}
